@@ -1,6 +1,16 @@
 const express = require('express');
 const app = express();
 
+/**
+ * GET /
+ * 
+ * Responds with "hello world".
+ * 
+ * Response:
+ * - Status: 200 OK
+ * - Body: A plain-text string "hello world".
+ */
+
 // Root endpoint
 app.get('/', (req, res) => {
     
@@ -10,6 +20,14 @@ app.get('/', (req, res) => {
 
 
 module.exports = app;
+
+
+/**
+ * Start the server if this file is executed directly.
+ * 
+ * Uses the environment variable `PORT` if available, otherwise defaults to 3000.
+ * Logs the URL of the running server to the console.
+ */
 
 if (require.main === module) {
     
